@@ -1,9 +1,18 @@
+import random
+import string
+
+
 def passwordgen():
-    return
+    list_password = []
+    random_lenght = random.randint(8, 14)
+    for i in range(0, random_lenght+1):
+        random_char = random.randint(33, 127)
+        list_password.append(str(chr(random_char)))
+    return str(list_password)
 
 
 def main():
-    return
+    print(passwordgen())
 
 
 if __name__ == '__main__':
