@@ -1,3 +1,6 @@
+import random
+
+
 def listoverlap(list1, list2):
     c = set(list1)
     d = set(list2)
@@ -5,8 +8,16 @@ def listoverlap(list1, list2):
 
 
 def main():
-    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-    b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    random_a = random.randint(1, 20)
+    random_b = random.randint(1, 20)
+    a = []
+    b = []
+    for i in range(0, random_a+1):
+        a.append(random.randint(0, 20))
+    print(a)
+    for i in range(0, random_b+1):
+        b.append(random.randint(0, 20))
+    print(b)
     result = listoverlap(a, b)
     print(result)
 
